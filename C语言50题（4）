@@ -1,0 +1,23 @@
+//求两个正整数的最大公因子（欧几里德算法)
+#include<stdio.h>
+int main()
+{
+    int a,b,c,t=1;
+    printf("请输入两个正整数：\n");
+    scanf("%d,%d",&a,&b);
+    if(a<=b)
+    {
+        c=a;
+        a=b;
+        b=c;
+    }
+    t=a%b;
+    while(t!=0)
+    {
+        a=b;
+        b=t;
+        t=a%b;
+    }
+    printf("这两个正整数的最大公因子为%d\n",b);
+    return 0;
+}
