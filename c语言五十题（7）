@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int t[50][50],y[50][50];
+    int s,d,i,j=0,sum[50],n=0;
+    for(s=0;;s++)
+    {
+        scanf("%d",&t[s][0]);
+        if(t[s][0]==0)  break;
+        d=1;
+        while(1)
+        {
+            scanf("%d",&t[s][d]);
+            d++;
+            if(d>t[s][0]) break;
+
+        }
+        for(d=1,i=0;;d++)
+        {
+            if(t[s][d]%2!=0){
+                y[s][i]=t[s][d];
+                i++;
+                j++;
+
+            }
+        }
+        for(i=0;i<=j;i++)
+        {
+            sum[n]=1;
+            sum[n]*=y[s][i];
+        }
+        n++;
+
+    }
+    for(n=0;n<=s;n++)
+       printf("%d\n",sum[n]);
+    return 0;
+
+}
