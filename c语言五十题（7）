@@ -9,13 +9,8 @@ int main()
         scanf("%d",&t[s][0]);
         if(t[s][0]==0)  break;
         d=1;
-        while(1)
-        {
-            scanf("%d",&t[s][d]);
-            d++;
-            if(d>t[s][0]) break;
-
-        }
+        for(;d<=t[s][0];d++)
+           scanf("%d",&t[s][d]);
         for(d=1,i=0;;d++)
         {
             if(t[s][d]%2!=0){
